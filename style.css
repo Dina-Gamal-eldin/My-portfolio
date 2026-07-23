@@ -1,0 +1,469 @@
+/* ========================================= */
+/* إعدادات عامة وتصفير الهوامش */
+/* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================================= */
+/* الهيدر والقائمة */
+/* ========================================= */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6c5ce7;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6c5ce7;
+}
+
+/* ========================================= */
+/* قسم About (Hero) */
+/* ========================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+.hero-content h1 span {
+    color: #6c5ce7;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #636e72;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5142d4;
+    transform: translateY(-3px);
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+    border: 5px solid #fff;
+}
+
+/* ========================================= */
+/* العناوين الرئيسية للأقسام */
+/* ========================================= */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #2d3436;
+    text-align: center;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #6c5ce7;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ========================================= */
+/* شبكة المهارات */
+/* ========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #6c5ce7;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: #2d3436;
+}
+
+/* ========================================= */
+/* تنسيقات كروت الهوايات */
+/* ========================================= */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.hobby-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.15);
+}
+
+.hobby-image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.hobby-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.hobby-card:hover .hobby-main-img {
+    transform: scale(1.08);
+}
+
+.hobby-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.hobby-info h3 {
+    font-size: 16px;
+    color: #2d3436;
+}
+
+/* ========================================= */
+/* المشاريع التقنية */
+/* ========================================= */
+.projects-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 22px;
+    color: #2d3436;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #6c5ce7;
+    display: inline-block;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 35px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(108, 92, 231, 0.15);
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 320px; 
+    background-color: #fcfcfd; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.project-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    padding: 10px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.04); 
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: #2d3436;
+}
+
+.tech-stack {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #636e72;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #6c5ce7;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* ========================================= */
+/* تنسيق مخصص لمعرض التطريز الدائري الثلاثي */
+/* ========================================= */
+.art-circles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.art-circle-card {
+    text-align: center;
+    background: transparent;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+.art-hoop {
+    width: 100%;          /* بتخلي الدائرة مرنة وتعتمد على المساحة المتاحة */
+    max-width: 240px;     /* أقصى عرض للدائرة عشان شكلها يفضل رقيق */
+    aspect-ratio: 1 / 1;  /* السر هنا: بيجبر الطول يساوي العرض بالظبط ويضمن دائرة مثالية */
+    margin: 0 auto 20px;
+    border-radius: 50%;   /* تحويل الإطار لدائرة كاملة */
+    border: 6px solid #fd79a8; 
+    box-shadow: 0 8px 20px rgba(253, 121, 168, 0.2);
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.art-hoop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* بتقص أطراف الصورة الزيادة وتخلي السنتر مظبوط جوة الدائرة من غير مط */
+    object-position: center; /* للتأكد إن وسط التطريز هو اللي ظاهر دايماً */
+    transition: transform 0.5s ease;
+}
+.art-circle-card:hover {
+    transform: translateY(-5px);
+}
+
+.art-circle-card:hover .art-hoop {
+    border-color: #6c5ce7; 
+    box-shadow: 0 12px 25px rgba(108, 92, 231, 0.3);
+}
+
+.art-circle-card:hover .art-hoop img {
+    transform: scale(1.08); 
+}
+
+.art-circle-card h3 {
+    font-size: 18px;
+    color: #2d3436;
+    margin-bottom: 5px;
+}
+
+.art-circle-card p {
+    font-size: 14px;
+    color: #636e72;
+}
+
+/* ========================================= */
+/* التواصل */
+/* ========================================= */
+.contact-section {
+    text-align: center;
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    color: #636e72;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+.email { background-color: #6c5ce7; }
+.linkedin { background-color: #0077b5; }
+.github { background-color: #333; }
+
+/* ========================================= */
+/* الفوتر */
+/* ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #2d3436;
+    color: #fff;
+    margin-top: 60px;
+}
+
+/* ========================================= */
+/* الشاشات الصغيرة (الموبايل) */
+/* ========================================= */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-top: 30px;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+    /* تجاوب دوائر التطريز مع الموبايل */
+    .art-circles-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .art-hoop {
+        width: 200px;
+        height: 200px;
+    }
+}
