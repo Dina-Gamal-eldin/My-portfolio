@@ -289,6 +289,26 @@ section h2::after {
     transform: scale(1.04); 
 }
 
+/* --- تنسيق عرض 3 صور بجانب بعضها للمشروع الأول --- */
+.project-img-wrapper.multi-img {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background-color: #fcfcfd;
+}
+
+.project-img-wrapper.multi-img .project-img {
+    width: calc(33.333% - 5.33px);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.project-card:hover .project-img-wrapper.multi-img .project-img {
+    transform: scale(1.02);
+}
+
 .project-info {
     padding: 25px;
     flex-grow: 1;
@@ -329,12 +349,13 @@ section h2::after {
     padding: 15px;
     transition: transform 0.3s ease;
 }
+
 .art-hoop {
-    width: 100%;          /* بتخلي الدائرة مرنة وتعتمد على المساحة المتاحة */
-    max-width: 240px;     /* أقصى عرض للدائرة عشان شكلها يفضل رقيق */
-    aspect-ratio: 1 / 1;  /* السر هنا: بيجبر الطول يساوي العرض بالظبط ويضمن دائرة مثالية */
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
     margin: 0 auto 20px;
-    border-radius: 50%;   /* تحويل الإطار لدائرة كاملة */
+    border-radius: 50%;
     border: 6px solid #fd79a8; 
     box-shadow: 0 8px 20px rgba(253, 121, 168, 0.2);
     overflow: hidden;
@@ -348,10 +369,11 @@ section h2::after {
 .art-hoop img {
     width: 100%;
     height: 100%;
-    object-fit: cover;    /* بتقص أطراف الصورة الزيادة وتخلي السنتر مظبوط جوة الدائرة من غير مط */
-    object-position: center; /* للتأكد إن وسط التطريز هو اللي ظاهر دايماً */
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.5s ease;
 }
+
 .art-circle-card:hover {
     transform: translateY(-5px);
 }
@@ -449,6 +471,12 @@ footer {
     }
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    .project-img-wrapper {
+        height: 250px;
+    }
+    .project-img-wrapper.multi-img {
+        height: 180px;
     }
     .hero-image img {
         width: 200px;
